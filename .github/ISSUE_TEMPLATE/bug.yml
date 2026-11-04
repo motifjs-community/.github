@@ -1,0 +1,41 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. If the problem is in MotifJS itself (`@motifx/core`, `@motifx/compiler`),
+        please open it in [motifjsdev/motifjs](https://github.com/motifjsdev/motifjs/issues) instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: repro
+    attributes:
+      label: Reproduction
+      description: A StackBlitz link or a small repository. Issues without one take much longer to fix.
+      placeholder: https://stackblitz.com/...
+  - type: textarea
+    id: code
+    attributes:
+      label: Smallest code that shows the problem
+      render: tsx
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Package, `@motifx/core`, `@motifx/compiler`, browser.
+      placeholder: "@motifx-community/x 0.1.0, @motifx/core 1.1.0, @motifx/compiler 1.1.0, Chrome 140"
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: Console output
+      description: Paste any `MJX` warnings or errors from the console or the build.
+      render: text
