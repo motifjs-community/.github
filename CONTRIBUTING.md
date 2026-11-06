@@ -25,8 +25,7 @@ npm run lint:jsx    # motif-lint (MJX005 and friends)
 npm run build
 ```
 
-Read the repository's `AGENTS.md` before writing code. It lists the MotifJS rules that trip up people
-coming from React or Vue, and the pitfalls specific to that repository. The short version:
+The MotifJS rules a change follows, in short:
 
 - `view()` runs once. Reactive reads must be fields (`{state.count}`) or getters (`{() => a + b}`).
 - Lowercase DOM names: `class`, `onclick`, `for`.
